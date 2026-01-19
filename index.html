@@ -3,101 +3,543 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tadawoul Pro - Plateforme de Trading</title>
+    <meta name="description" content="Tadawoul Pro - Plateforme de trading moderne et professionnel">
+    <meta name="keywords" content="trading, crypto, actions, investissement">
+    <meta name="author" content="Tadawoul Pro">
+    
+    <title>Tadawoul Pro - Plateforme de Trading Moderne</title>
+    
     <!-- Bootstrap CSS 5.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </head>
-<body class="bg-light">
+<body>
 
-    <!-- Navbar with Offcanvas -->
-    <nav class="navbar navbar-dark bg-dark fixed-top">
-      <div class="container-fluid">
-        <a class="navbar-brand fw-bold" href="#">TADAWOUL <span class="text-primary">PRO</span></a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="offcanvas offcanvas-end text-bg-dark" id="offcanvasNavbar">
-          <div class="offcanvas-header border-bottom border-secondary">
-            <h5 class="offcanvas-title">Menu Trading</h5>
-            <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
-          </div>
-          <div class="offcanvas-body">
-            <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-              <li class="nav-item"><a class="nav-link active" href="#">Tableau de Bord</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Marchés</a></li>
-              <li class="nav-item"><a class="nav-link" href="#">Historique</a></li>
-            </ul>
-          </div>
+    <!-- Modern Navbar -->
+    <nav class="navbar navbar-dark navbar-modern fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand fw-bold d-flex align-items-center" href="#home">
+                <i class="fas fa-chart-line me-2 gradient-text"></i>
+                <span>TADAWOUL <span class="gradient-text">PRO</span></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end offcanvas-modern" id="offcanvasNavbar">
+                <div class="offcanvas-header border-bottom border-secondary">
+                    <div class="d-flex align-items-center">
+                        <i class="fas fa-chart-line me-2 gradient-text" style="font-size: 1.5rem;"></i>
+                        <h5 class="offcanvas-title mb-0">Menu Trading</h5>
+                    </div>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="offcanvas-menu-section mb-4">
+                        <h6 class="text-uppercase text-muted mb-3" style="font-size: 0.8rem; letter-spacing: 1px;">Navigation</h6>
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-item mb-2">
+                                <a class="nav-link smooth-scroll offcanvas-nav-link" href="#home" data-bs-dismiss="offcanvas">
+                                    <i class="fas fa-home me-2"></i>Accueil
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link smooth-scroll offcanvas-nav-link" href="#marchés" data-bs-dismiss="offcanvas">
+                                    <i class="fas fa-chart-line me-2"></i>Marchés
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link smooth-scroll offcanvas-nav-link" href="#features" data-bs-dismiss="offcanvas">
+                                    <i class="fas fa-star me-2"></i>Fonctionnalités
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link smooth-scroll offcanvas-nav-link" href="#pricing" data-bs-dismiss="offcanvas">
+                                    <i class="fas fa-tag me-2"></i>Plans de Prix
+                                </a>
+                            </li>
+                            <li class="nav-item mb-2">
+                                <a class="nav-link smooth-scroll offcanvas-nav-link" href="#contact" data-bs-dismiss="offcanvas">
+                                    <i class="fas fa-envelope me-2"></i>Contact
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <hr class="border-secondary my-4">
+                    <div class="offcanvas-menu-section mb-4">
+                        <h6 class="text-uppercase text-muted mb-3" style="font-size: 0.8rem; letter-spacing: 1px;">Compte</h6>
+                        <button class="btn btn-gradient w-100 mb-3" data-bs-toggle="modal" data-bs-target="#tradeModal" data-bs-dismiss="offcanvas">Connexion</button>
+                        <button class="btn btn-outline-light w-100" data-bs-toggle="modal" data-bs-target="#tradeModal" data-bs-dismiss="offcanvas">Créer un Compte</button>
+                    </div>
+                    <hr class="border-secondary my-4">
+                    <div class="offcanvas-menu-section">
+                        <h6 class="text-uppercase text-muted mb-3" style="font-size: 0.8rem; letter-spacing: 1px;">Nous Suivre</h6>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-sm btn-outline-light" title="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-light" title="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-light" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-light" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
     </nav>
 
-    <!-- Header / Hero Section -->
-    <header class="py-5 mt-5 bg-primary text-white text-center">
-        <div class="container py-5">
-            <h1 class="display-4 fw-bold">Négociez sur les Marchés Mondiaux</h1>
-            <p class="lead">Accès rapide, sécurisé et en temps réel aux actions et cryptos.</p>
-            <button class="btn btn-light btn-lg px-4" data-bs-toggle="modal" data-bs-target="#tradeModal">Ouvrir un Compte</button>
+    <!-- Hero Section with Animation -->
+    <header id="home" class="hero-section pt-5 mt-5 text-white text-center overflow-hidden">
+        <div class="animated-bg"></div>
+        <div class="container py-5 position-relative">
+            <div class="hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <h1 class="display-3 fw-bold mb-3">Négociez sur les Marchés Mondiaux</h1>
+                <p class="lead mb-4 text-light">Plateforme de trading moderne, sécurisée et en temps réel</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <button class="btn btn-gradient btn-lg px-5" data-bs-toggle="modal" data-bs-target="#tradeModal">Ouvrir un Compte</button>
+                    <a href="#marchés" class="btn btn-outline-light btn-lg px-5">Découvrir</a>
+                </div>
+            </div>
+            <div class="hero-stats mt-5" data-aos="fade-up" data-aos-delay="200" data-aos-duration="1000">
+                <div class="row g-4">
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="stat-number">50K+</h3>
+                            <p class="stat-label">Utilisateurs Actifs</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="stat-number">$2B+</h3>
+                            <p class="stat-label">Volume Traité</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="stat-number">200+</h3>
+                            <p class="stat-label">Actifs Disponibles</p>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-6">
+                        <div class="stat-item">
+                            <h3 class="stat-number">24/7</h3>
+                            <p class="stat-label">Support Client</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </header>
 
-    <main class="container my-5">
-        <div class="row g-4">
-            <!-- Market Table Section -->
-            <section class="col-lg-8">
-                <div class="card shadow-sm border-0">
-                    <div class="card-header bg-white fw-bold">Performances du Marché</div>
-                    <div class="table-responsive p-3">
-                        <table class="table table-hover align-middle">
-                            <thead class="table-light">
-                                <tr>
-                                    <th>Actif</th>
-                                    <th>Prix</th>
-                                    <th>Change (24h)</th>
-                                    <th>Action</th>
+    <main>
+        <!-- Markets Section -->
+        <section id="marchés" class="py-5 bg-white">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2">Performances du Marché</h2>
+                    <p class="text-muted fs-5">Accédez en temps réel aux meilleures opportunités</p>
+                </div>
+
+                <div class="card card-modern shadow-lg border-0 overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-header bg-gradient-custom p-4">
+                        <h5 class="card-title mb-0 text-white">Données en Temps Réel</h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-modern mb-0">
+                            <thead>
+                                <tr class="border-bottom">
+                                    <th class="fw-bold">Actif</th>
+                                    <th class="fw-bold">Prix</th>
+                                    <th class="fw-bold">Change (24h)</th>
+                                    <th class="fw-bold">Volume</th>
+                                    <th class="fw-bold">Action</th>
                                 </tr>
                             </thead>
                             <tbody id="market-data">
-                                <tr>
-                                    <td><strong>BTC/USD</strong></td>
-                                    <td>$96,420.50</td>
-                                    <td class="text-success">+2.4%</td>
-                                    <td><button class="btn btn-sm btn-outline-primary">Acheter</button></td>
+                                <tr class="market-row">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fab fa-bitcoin fa-lg text-warning"></i>
+                                            <strong>BTC/USD</strong>
+                                        </div>
+                                    </td>
+                                    <td class="fw-bold">$96,420.50</td>
+                                    <td><span class="badge bg-success">+2.4%</span></td>
+                                    <td>$42.5B</td>
+                                    <td><button class="btn btn-sm btn-gradient">Acheter</button></td>
                                 </tr>
-                                <tr>
-                                    <td><strong>ETH/USD</strong></td>
-                                    <td>$2,540.15</td>
-                                    <td class="text-danger">-1.2%</td>
-                                    <td><button class="btn btn-sm btn-outline-primary">Acheter</button></td>
+                                <tr class="market-row">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fab fa-ethereum fa-lg text-info"></i>
+                                            <strong>ETH/USD</strong>
+                                        </div>
+                                    </td>
+                                    <td class="fw-bold">$2,540.15</td>
+                                    <td><span class="badge bg-danger">-1.2%</span></td>
+                                    <td>$18.2B</td>
+                                    <td><button class="btn btn-sm btn-gradient">Acheter</button></td>
+                                </tr>
+                                <tr class="market-row">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fas fa-coins fa-lg text-success"></i>
+                                            <strong>SOL/USD</strong>
+                                        </div>
+                                    </td>
+                                    <td class="fw-bold">$195.75</td>
+                                    <td><span class="badge bg-success">+5.8%</span></td>
+                                    <td>$8.1B</td>
+                                    <td><button class="btn btn-sm btn-gradient">Acheter</button></td>
+                                </tr>
+                                <tr class="market-row">
+                                    <td>
+                                        <div class="d-flex align-items-center gap-2">
+                                            <i class="fas fa-dollar-sign fa-lg text-primary"></i>
+                                            <strong>AAPL/USD</strong>
+                                        </div>
+                                    </td>
+                                    <td class="fw-bold">$238.90</td>
+                                    <td><span class="badge bg-success">+1.5%</span></td>
+                                    <td>$3.2B</td>
+                                    <td><button class="btn btn-sm btn-gradient">Acheter</button></td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
-            </section>
 
-            <!-- Order Form Section -->
-            <section class="col-lg-4">
-                <div class="card shadow-sm border-0 p-4">
-                    <h5 class="fw-bold mb-4">Passer un Ordre</h5>
-                    <form id="tradingForm">
+                <div class="row mt-5 g-4">
+                    <div class="col-md-6" data-aos="fade-right" data-aos-delay="200">
+                        <div class="card card-modern border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold mb-3">
+                                    <i class="fas fa-chart-pie gradient-text me-2"></i>Performance
+                                </h5>
+                                <div class="progress-item mb-3">
+                                    <p class="mb-2"><strong>Rentabilité Année</strong></p>
+                                    <div class="progress" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-gradient-custom" style="width: 65%">65%</div>
+                                    </div>
+                                </div>
+                                <div class="progress-item">
+                                    <p class="mb-2"><strong>Taux de Réussite</strong></p>
+                                    <div class="progress" role="progressbar" aria-valuenow="82" aria-valuemin="0" aria-valuemax="100">
+                                        <div class="progress-bar bg-success" style="width: 82%">82%</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+                        <div class="card card-modern border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h5 class="card-title fw-bold mb-4">
+                                    <i class="fas fa-lock gradient-text me-2"></i>Sécurité
+                                </h5>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Chiffrement 256-bit</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Authentification 2FA</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Assurance des Fonds</li>
+                                    <li class="mb-2"><i class="fas fa-check-circle text-success me-2"></i> Conformité Régulementaire</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="features" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2">Fonctionnalités Avancées</h2>
+                    <p class="text-muted fs-5">Tout ce dont vous avez besoin pour trader comme un professionnel</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="0">
+                        <div class="feature-card card-modern border-0 shadow-sm h-100 text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Trading Ultra-Rapide</h5>
+                            <p class="text-muted">Exécution en millisecondes</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                        <div class="feature-card card-modern border-0 shadow-sm h-100 text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-mobile-alt"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Application Mobile</h5>
+                            <p class="text-muted">Trading sur le pouce</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                        <div class="feature-card card-modern border-0 shadow-sm h-100 text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Trading Automatisé</h5>
+                            <p class="text-muted">Algorithmes intelligents</p>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                        <div class="feature-card card-modern border-0 shadow-sm h-100 text-center p-4">
+                            <div class="feature-icon mb-3">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h5 class="fw-bold mb-2">Formation Gratuite</h5>
+                            <p class="text-muted">Apprenez à trader</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Trading Form Section -->
+        <section id="trading" class="py-5 bg-white">
+            <div class="container">
+                <div class="row g-4">
+                    <div class="col-lg-8" data-aos="fade-right">
+                        <div class="section-header mb-4">
+                            <h3 class="display-6 fw-bold">Analyse du Marché</h3>
+                            <p class="text-muted">Prenez les meilleures décisions avec nos outils d'analyse</p>
+                        </div>
+                        <div class="card card-modern border-0 shadow-sm p-4">
+                            <canvas id="priceChart" height="80"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-left">
+                        <div class="card card-modern border-0 shadow-lg p-4 sticky-form">
+                            <h5 class="fw-bold mb-4">Passer un Ordre</h5>
+                            <form id="tradingForm">
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Type d'Actif</label>
+                                    <select class="form-select form-modern" required>
+                                        <option value="">Sélectionner un actif</option>
+                                        <option value="BTC">Bitcoin (BTC)</option>
+                                        <option value="ETH">Ethereum (ETH)</option>
+                                        <option value="SOL">Solana (SOL)</option>
+                                        <option value="AAPL">Apple (AAPL)</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Type d'Ordre</label>
+                                    <select class="form-select form-modern" required>
+                                        <option value="achat">Achat</option>
+                                        <option value="vente">Vente</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Montant (USD)</label>
+                                    <input type="number" class="form-control form-modern" placeholder="0.00" min="10" step="0.01" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Prix Limite (Optionnel)</label>
+                                    <input type="number" class="form-control form-modern" placeholder="0.00" step="0.01">
+                                </div>
+                                <button type="submit" class="btn btn-gradient w-100 fw-bold py-2">Exécuter l'Ordre</button>
+                                <small class="d-block text-center text-muted mt-2">Frais: 0.25% | Minimum: $10</small>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section id="pricing" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2">Plans d'Abonnement</h2>
+                    <p class="text-muted fs-5">Choisissez le plan qui vous convient</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="0">
+                        <div class="pricing-card card border-0 shadow-sm p-4 h-100">
+                            <h5 class="fw-bold mb-3">Débutant</h5>
+                            <h2 class="mb-3"><span class="text-muted">$</span>0<span class="fs-6 text-muted">/mois</span></h2>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trading Spot</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>10 Actifs</li>
+                                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>API</li>
+                                <li class="mb-2"><i class="fas fa-times text-danger me-2"></i>Support Premium</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100 fw-bold">Commencer</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-card card border-0 shadow-lg p-4 h-100 featured">
+                            <div class="badge bg-gradient-custom position-absolute top-0 start-50 translate-middle-x">POPULAIRE</div>
+                            <h5 class="fw-bold mb-3">Professionnel</h5>
+                            <h2 class="mb-3"><span class="text-muted">$</span>49<span class="fs-6 text-muted">/mois</span></h2>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trading Spot & Futures</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>100+ Actifs</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>API</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Support 24/7</li>
+                            </ul>
+                            <button class="btn btn-gradient w-100 fw-bold">S'inscrire</button>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-card card border-0 shadow-sm p-4 h-100">
+                            <h5 class="fw-bold mb-3">Entreprise</h5>
+                            <h2 class="mb-3"><span class="text-muted">$</span>199<span class="fs-6 text-muted">/mois</span></h2>
+                            <ul class="list-unstyled mb-4">
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trading Avancé</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Tous les Actifs</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>API Illimitée</li>
+                                <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Gestionnaire Dédié</li>
+                            </ul>
+                            <button class="btn btn-outline-primary w-100 fw-bold">Contacter</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-5 bg-gradient-custom text-white text-center overflow-hidden">
+            <div class="container position-relative" data-aos="zoom-in">
+                <h2 class="display-5 fw-bold mb-3">Prêt à Commencer ?</h2>
+                <p class="lead mb-4">Rejoignez des milliers de traders et investisseurs actifs</p>
+                <button class="btn btn-light btn-lg px-5 fw-bold" data-bs-toggle="modal" data-bs-target="#tradeModal">Ouvrir un Compte Gratuit</button>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-5 bg-light">
+            <div class="container">
+                <div class="section-header text-center mb-5" data-aos="fade-up">
+                    <h2 class="display-5 fw-bold mb-2">Nous Contacter</h2>
+                    <p class="text-muted fs-5">Une question ? Notre équipe est à votre écoute</p>
+                </div>
+
+                <div class="row g-4">
+                    <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="0">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope fa-3x mb-3 gradient-text"></i>
+                            <h6 class="fw-bold">Email</h6>
+                            <a href="mailto:support@tadawoulpro.com" class="text-decoration-none">support@tadawoulpro.com</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="contact-item">
+                            <i class="fas fa-phone fa-3x mb-3 gradient-text"></i>
+                            <h6 class="fw-bold">Téléphone</h6>
+                            <a href="tel:+212612345678" class="text-decoration-none">+212 6 12 34 56 78</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt fa-3x mb-3 gradient-text"></i>
+                            <h6 class="fw-bold">Localisation</h6>
+                            <p>Casablanca, Maroc</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-5">
+            <div class="container">
+                <div class="row g-4 mb-4">
+                    <div class="col-md-3" data-aos="fade-up">
+                        <h6 class="fw-bold mb-3">À Propos</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-muted">Qui sommes-nous</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Notre équipe</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Carrières</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                        <h6 class="fw-bold mb-3">Ressources</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-muted">Documentation</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Blog</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Support</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                        <h6 class="fw-bold mb-3">Légal</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#" class="text-decoration-none text-muted">Conditions</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Confidentialité</a></li>
+                            <li><a href="#" class="text-decoration-none text-muted">Cookies</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                        <h6 class="fw-bold mb-3">Nous Suivre</h6>
+                        <div class="d-flex gap-2">
+                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-facebook"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" class="btn btn-sm btn-outline-light"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <hr class="border-secondary">
+                <div class="text-center text-muted">
+                    <p class="mb-0">&copy; 2026 Tadawoul Pro. Tous droits réservés.</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Modal for Trading -->
+    <div class="modal fade" id="tradeModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0">
+                <div class="modal-header bg-gradient-custom text-white border-0">
+                    <h5 class="modal-title fw-bold">Créer un Compte</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body p-4">
+                    <form id="registrationForm">
                         <div class="mb-3">
-                            <label class="form-label">Type d'Actif</label>
-                            <select class="form-select">
-                                <option>Bitcoin (BTC)</option>
-                                <option>Ethereum (ETH)</option>
-                                <option>Solana (SOL)</option>
-                            </select>
+                            <label class="form-label fw-bold">Nom Complet</label>
+                            <input type="text" class="form-control form-modern" required>
                         </div>
                         <div class="mb-3">
-                            <label class="form-label">Montant (USD)</label>
-                            <input type="number" class="form-control" placeholder="0.00" required>
+                            <label class="form-label fw-bold">Email</label>
+                            <input type="email" class="form-control form-modern" required>
                         </div>
-                        <button type="submit" class="btn btn-success w-100 fw-bold">Exécuter l'Achat</button>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Mot de Passe</label>
+                            <input type="password" class="form-control form-modern" required>
+                        </div>
+                        <button type="submit" class="btn btn-gradient w-100 fw-bold">S'inscrire</button>
                     </form>
                 </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
             </section>
         </div>
     </main>

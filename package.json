@@ -1,0 +1,46 @@
+{
+  "name": "Tadawoul Pro",
+  "version": "1.0.0",
+  "description": "Plateforme de trading moderne et professionnelle",
+  "author": "Tadawoul Pro Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/votre-username/tadawoul-pro.git"
+  },
+  "keywords": [
+    "trading",
+    "crypto",
+    "actions",
+    "investissement",
+    "plateforme",
+    "modern",
+    "responsive"
+  ],
+  "homepage": "https://github.com/votre-username/tadawoul-pro",
+  "bugs": {
+    "url": "https://github.com/votre-username/tadawoul-pro/issues"
+  },
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'No build required for static site'",
+    "test": "echo 'Add your tests here'",
+    "lint": "echo 'Add your linter here'"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not IE 11"
+  ],
+  "dependencies": {
+    "bootstrap": "^5.3.8",
+    "chart.js": "^3.9.1",
+    "aos": "^2.3.1",
+    "font-awesome": "^6.4.0"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
